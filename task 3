@@ -1,0 +1,40 @@
+import random
+import string 
+print("A Random Password Generator")
+
+def generate_password(min_len,num=True,special_characters=True):
+    letter=string.ascii_letters
+    digit=string.digits
+    special=string.punctuation
+
+    character=letter
+    if num == True:
+        character=character+digit
+    if special_characters == True:
+        character=character+special
+    
+    password=""
+    criteria=False
+    has_number=False
+    has_specialchar=False
+
+    while len(password)<min_len:
+        new_ch=random.choice(character)
+        password=password+new_ch
+
+        if new_ch in digit:
+            has_number=True
+        elif new_ch in special:
+            has_specialchar=True
+        
+        criteria=True 
+        if num == True:
+              criteria=has_number
+        if special_characters == True:
+              criteria=criteria and has_specialchar
+
+    return password
+
+length=int(input("Enter the length of the password:"))
+password=generate_password(length)
+print("The randomly generated password is:",password)
