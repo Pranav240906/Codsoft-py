@@ -1,0 +1,40 @@
+import random
+
+
+print("Rock-Paper-Scissors Game")
+print("1.Rock")
+print("2.Paper")
+print("3.Scissors")
+n=int(input("Enter how many rounds you want:"))
+
+for i in range(n):
+    user=int(input("Enter your choice(1/2/3):"))
+    print("User choice:",user)
+    comp_choices=["Rock","Paper","Scissors"]
+    random_choice=random.choice(comp_choices)
+    comp_choice=random_choice
+    print("Computer choice:",comp_choice)
+
+
+    if user == 1 and comp_choice == "Rock":
+        print("Draw")
+    if user == 1 and comp_choice == "Scissors":
+        print("User Wins")
+    if user == 1 and comp_choice == "Paper":
+        print("Computer Wins")
+
+
+    if user == 2 and comp_choice == "Paper":
+        print("Draw")
+    if user == 2 and comp_choice == "Rock":
+        print("User Wins")
+    if user == 2 and comp_choice == "Scissors":
+        print("Computer wins")
+
+
+    if user == 3 and comp_choice == "Scissors":
+        print("Draw")
+    if user == 3 and comp_choice == "Paper":
+        print("User Wins")
+    if user == 3 and comp_choice == "Rock":
+        print("Computer Wins")
