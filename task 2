@@ -1,0 +1,32 @@
+print("A Simple Calculator")
+num1=float(input("Enter the first number:"))
+num2=float(input("Enter the second number:"))
+print("Select any one operation")
+print("1:Addition(+)")
+print("2:Subtraction(-)")
+print("3:Multiplication(*)")
+print("4:Division(/)")
+
+op=input("Enter the operation (1/2/3/4): ")
+
+
+
+if op=="1":
+    res1=num1+num2
+    print("The result of num1+num2 is",res1)
+elif op=="2":
+    res2=num1-num2
+    print("The result of num1-num2 is",res2)
+elif op=="3":
+    res3=num1*num2
+    print("The result of num1*num2 is",res3)
+elif op=="4":
+    if num2!=0:
+        res4=num1/num2
+        print("The result of num1/num2 is",res4)
+    else:
+        print("Error:Division by zero is not possible.")
+else:
+    print("Invalid operation. Please choose 1, 2, 3, or 4.")
+
+print("Thank you for using the simple calculator")
